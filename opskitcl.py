@@ -21,7 +21,7 @@ def show_help(args, arg_parser):
 
         return
     else:
-        module_name = 'opskit.{0}'.format(args.product.replace('-', '_'))
+        module_name = 'opskit_{0}'.format(args.product.replace('-', '_'))
 
     try:
         module_instance = importlib.import_module(module_name)
@@ -44,7 +44,7 @@ def show_help(args, arg_parser):
         print()
 
 def run_action(args):
-    module_name = 'opskit.{0}'.format(args.product.replace('-', '_'))
+    module_name = 'opskit_{0}'.format(args.product.replace('-', '_'))
 
     module_instance = importlib.import_module(module_name)
     class_instance = getattr(module_instance, args.action)
@@ -54,6 +54,8 @@ def run_action(args):
     action_instance.run_action()
 
 def main():
+
+    sys.path.append('.')
 
     arg_parser = build_arg_parser()
 

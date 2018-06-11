@@ -1,14 +1,14 @@
 from distutils.core import setup
 setup(
   name = 'opskit',
-  py_modules = ['opskit-cl'],
+  py_modules = ['opskitcl'],
   packages = ['opskit'], 
   entry_points = {
-    'console_scripts': ['opskit=opskit-cl:main'],
+    'console_scripts': ['opskit=opskitcl:main'],
   },
-  version = '0.9.108',
+  version = '0.11.108',
   author = 'Mark Sweat',
   author_email = 'mark@surfkansas.com',
   url = 'https://github.com/surfkansas/opskit', 
-  download_url = 'https://github.com/surfkansas/opskit/archive/0.9.108.tar.gz'
+  download_url = 'https://github.com/surfkansas/opskit/archive/0.11.108.tar.gz'
 )

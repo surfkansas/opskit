@@ -28,7 +28,7 @@ Each *product* in opskit is a seperate Python module.  Each *action* is a named 
 
 ## Release History
 
-### 0.9.108 (obelisk)
+### 0.11.108 (obelisk)
 
 * Initial public release
 
