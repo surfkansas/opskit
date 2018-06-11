@@ -14,7 +14,12 @@ def build_arg_parser():
 
 def show_help(args, arg_parser):
     if args.product is None:
-        module_name = 'opskit'
+
+        print()
+        print('usage: opskit <product> <action> [--help] [[action args]]')
+        print()
+
+        return
     else:
         module_name = 'opskit.{0}'.format(args.product.replace('-', '_'))
 
@@ -31,6 +36,7 @@ def show_help(args, arg_parser):
             print(help_file.read())
             print()
     except:
+        print()
         if args.action is not None:
             print('Unable to show help for module: {0}, action: {1}'.format(module_name, args.action))
         else:
