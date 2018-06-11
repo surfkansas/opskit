@@ -28,7 +28,7 @@ def show_help(args, arg_parser):
         module_path = module_instance.__path__[0]
         help_name = 'help.txt'
         if args.action is not None:
-            help_name = 'help_{0}.txt'.format(args.action)
+            help_name = 'help_{0}.txt'.format(args.action.replace('-', '_'))
 
         help_path = os.path.join(module_path, help_name)
         with open(help_path, 'r') as help_file:
@@ -47,7 +47,7 @@ def run_action(args):
     module_name = 'opskit_{0}'.format(args.product.replace('-', '_'))
 
     module_instance = importlib.import_module(module_name)
-    class_instance = getattr(module_instance, args.action)
+    class_instance = getattr(module_instance, args.action.replace('-', '_'))
     action_instance = class_instance()
 
     action_instance.initialize(build_arg_parser())
