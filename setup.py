@@ -4,11 +4,11 @@ setup(
   py_modules = ['opskit'],
   packages = ['opskit'], 
   entry_points = {
-    'console_scripts': ['opskit=opskit:main'],
+    'console_scripts': ['opskit=opskitcl:main'],
   },
-  version = '0.8.108.3',
+  version = '0.8.108.4',
   author = 'Mark Sweat',
   author_email = 'mark@surfkansas.com',
   url = 'https://github.com/surfkansas/opskit', 
-  download_url = 'https://github.com/surfkansas/opskit/archive/0.8.108.3.tar.gz'
+  download_url = 'https://github.com/surfkansas/opskit/archive/0.8.108.4.tar.gz'
 )
